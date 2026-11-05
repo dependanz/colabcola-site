@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#13090b">
+  <meta name="description" content="Colab Cola is a command-line toolkit for packaging, running, and recovering Python workloads on Google Colab.">
+  <link rel="canonical" href="https://colabcola.com/">
+  <link rel="stylesheet" href="assets/site.css">
+  <title>Colab Cola — Run Python on Google Colab from your terminal</title>
+</head>
+<body>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="./">Colab <span>Cola</span></a>
+    <nav class="nav" aria-label="Main navigation"><a href="./" aria-current="page">Home</a><a href="docs/">Documentation</a><a href="privacy/">Privacy</a></nav>
+  </div></header>
+  <main>
+    <div class="container hero">
+      <img class="hero-image" src="assets/colabcola-banner.png" width="1584" height="396" alt="Colab Cola wordmark and terminal commands for packaging and running a Python job on Google Colab">
+      <div class="hero-copy">
+        <span class="eyebrow">Command-line tools for Google Colab</span>
+        <h1>From local Python scripts to managed Colab runs.</h1>
+        <p class="lead">Package Python code and inputs, run workloads on Google Colab, and recover logs, checkpoints, and verified results using a local CLI.</p>
+        <div class="actions"><a class="button button-primary" href="docs/">Get started</a><a class="button button-secondary" href="privacy/">How Google data is used</a></div>
+      </div>
+    </div>
+    <section class="section container" aria-labelledby="how-heading">
+      <h2 id="how-heading">What Colab Cola does</h2>
+      <p class="section-intro">An independent open-source project focused on making script-driven Colab workloads easier to prepare and recover—without turning your project into a manually operated notebook.</p>
+      <div class="cards">
+        <div class="card"><h3>Package</h3><p>Bundle Python entry points, dependencies, and inputs into reproducible job specifications.</p></div>
+        <div class="card"><h3>Run</h3><p>Launch and monitor managed executions using a Google account and a configured Cloud project.</p></div>
+        <div class="card"><h3>Recover</h3><p>Use durable journals, checkpoints, and Drive-hosted artifacts to reconnect to work and retrieve results.</p></div>
+      </div>
+    </section>
+    <section class="section container" aria-labelledby="install-heading">
+      <h2 id="install-heading">Install and get started</h2>
+      <p class="section-intro"><span class="status">v0.1.0 release in preparation</span> The package is undergoing final release checks; the command below is the planned installation experience.</p>
+      <div class="code-panel"><pre><span class="prompt">$</span> python -m pip install colabcola
+<span class="prompt">$</span> colabcola login
+<span class="prompt">$</span> colabcola package --save-colaml train.colaml -- python train.py
+<span class="prompt">$</span> colabcola run --colaml train.colaml --run-dir runs/train</pre></div>
+      <p class="small">For detailed setup, prerequisites, and CLI examples, see the <a href="docs/">documentation</a>. The initial release is being prepared; do not assume the package is available on PyPI yet.</p>
+    </section>
+    <section class="section container" aria-labelledby="access-heading">
+      <h2 id="access-heading">Your Google account, your project, your data</h2>
+      <p class="section-intro">Colab Cola authorizes Google services through your browser. Its production desktop OAuth client requests access to files you use with the application, not unrestricted access to your Drive. Cloud project selection and execution remain associated with your account.</p>
+      <div class="note"><strong>Independent project.</strong> Colab Cola is not developed by, affiliated with, or endorsed by Google. Google Colab, Google Drive, and Google are trademarks of Google LLC.</div>
+      <p><a href="privacy/">Read the privacy policy</a> for details on permissions, local credentials, and Google Drive storage.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Colab Cola contributors · Apache-2.0</span><span><a href="docs/">Docs</a> · <a href="privacy/">Privacy</a> · <a href="mailto:danzel.serrano@gmail.com">Contact</a></span></div></footer>
+</body>
+</html>

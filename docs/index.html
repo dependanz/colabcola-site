@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#13090b"><meta name="description" content="Install, log in, package, and run Python jobs with Colab Cola."><link rel="canonical" href="https://colabcola.com/docs/"><link rel="stylesheet" href="../assets/site.css"><title>Documentation — Colab Cola</title></head>
+<body>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="../">Colab <span>Cola</span></a><nav class="nav" aria-label="Main navigation"><a href="../">Home</a><a ./" aria-current="page">Documentation</a><a href="../privacy/">Privacy</a></nav></div></header>
+<main><article class="content-page container">
+  <span class="eyebrow">Quick start</span><h1>Documentation</h1>
+  <p><span class="status">v0.1.0 release in preparation</span> Colab Cola runs on Python 3.12 or later. The commands below are intended for the first public release, which is not yet confirmed available on PyPI.</p>
+  <h2>Install</h2><div class="code-panel"><pre><span class="prompt">$</span> python -m pip install colabcola</pre></div>
+  <h2>Connect your Google account</h2><div class="code-panel"><pre><span class="prompt">$</span> colabcola login</pre></div>
+  <p>Follow the interactive prompts to authorize Google Colab and per-file Google Drive access and select or create an execution project. Colab Cola ships with a desktop OAuth client, so you do not need to create your own OAuth application for the default flow. You may use <code>colabcola login --help</code> to see advanced account and project options.</p>
+  <h2>Package a Python workload</h2><div class="code-panel"><pre><span class="prompt">$</span> colabcola package --save-colaml train.colaml -- python train.py</pre></div>
+  <p>Run the command from your project directory, ensuring <code>train.py</code> exists. The resulting recipe records how to package the workload.</p>
+  <h2>Execute and recover results</h2><div class="code-panel"><pre><span class="prompt">$</span> colabcola run --colaml train.colaml --run-dir runs/train</pre></div>
+  <p>The run directory stores the local journal used to follow or reconnect to a managed execution. The CLI can publish logs, checkpoints, and recovered artifacts through your configured Google Drive folder. Runtime allocations and Drive transfers depend on your Google account and Google Colab availability.</p>
+  <h2>Requirements and access</h2>
+  <ul><li>Python 3.12 or newer.</li><li>A Google account that can access Google Colab.</li><li>Google Cloud project configuration as requested by onboarding, with the required API enabled.</li><li>Authorization for the specific Google Drive files used by Colab Cola.</li></ul>
+  <p>For help with an installed version, run <code>colabcola --help</code>, <code>colabcola package --help</code>, or <code>colabcola run --help</code>.</p>
+  <div class="note"><strong>Current release state:</strong> the first public version is undergoing final packaging and OAuth verification. This page will be expanded once the code repository is publicly available.</div>
+</article></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 Colab Cola contributors · Apache-2.0</span><span><a href="../">Home</a> · <a href="../privacy/">Privacy</a></span></div></footer>
+</body></html>
